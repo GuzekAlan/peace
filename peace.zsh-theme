@@ -2,13 +2,7 @@
 
 MODE_INDICATOR="%{$fg_bold[red]%}❮%{$reset_color%}%{$fg[red]%}❮❮%{$reset_color%}"
 local return_status="%{$fg[red]%}%(?..⏎)%{$reset_color%}"
-
-# Custom color palette (approximated for terminal)
-# yale-blue: #0d3b66 -> blue
-# lemon-chiffon: #faf0ca -> white/yellow
-# naples-yellow: #f4d35e -> yellow
-# sandy-brown: #ee964b -> orange (using yellow in terminal)
-# tomato: #f95738 -> red
+local icon="󰯬"
 
 # Git status indicators (robbyrussel style)
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[magenta]%}(%{$FG[196]%}"
@@ -17,7 +11,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[red]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[magenta]%}) %{$fg[green]%}✓"
 
 # Main prompt: magenta sign + path + space + git info + system time
-PROMPT='%{$fg[magenta]%}卐%{$reset_color%} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)$(current_time)
+PROMPT='%{$fg[magenta]%}%{$icon%}%{$reset_color%} %{$fg[cyan]%}%~%{$reset_color%} $(git_prompt_info)$(current_time)
 %{$fg[green]%}➜%{$reset_color%} '
 
 RPROMPT=""
